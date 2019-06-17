@@ -9,11 +9,11 @@ export function Footer () {
         &copy; {(new Date()).getFullYear()}
       </h4>
       <a
-        href="https://github.com/alex-taxiera"
+        href="https://github.com/zematoxic"
         target="_blank"
       >
         <h4>
-          Alex Taxiera
+          ZemaToxic
         </h4>
       </a>
       <a
@@ -21,7 +21,7 @@ export function Footer () {
         target="_blank"
       >
         <h4>
-          {'<Code />'}
+          {'<Source Code />'}
         </h4>
       </a>
     </footer>
