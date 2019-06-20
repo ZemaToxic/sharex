@@ -5,6 +5,7 @@ import { fetchImages } from '../../redux/operations'
 
 import { SEO } from '../../components/seo'
 import { FileLoader } from '../../components/file-loader'
+import DropDown from './DropDown'
 
 import './index.scss'
 
@@ -14,6 +15,7 @@ function Images ({ images }) {
       <SEO
         title="Images"
       />
+      <DropDown title='Image Layout'/>
       <FileLoader
         className="image-files"
         files={images}
