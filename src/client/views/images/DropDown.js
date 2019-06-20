@@ -16,24 +16,26 @@ export class DropDown extends Component {
   }
   
   double(event) {
-    var x = document.getElementsByClassName(".image-files > .image");
+    var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
     var i;
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "45%";
     }
   }
   triple(event) {
-    var x = document.getElementsByClassName(".image-files > .image")
+    var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
     var i;
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "30%";
-    }  }
+    }  
+  }
   quad(event) {
-    var x = document.getElementsByClassName(".image-files > .image")
+    var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
     var i;
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "20%";
-    }  }
+    }  
+  }
   showMenu(event) {
     event.preventDefault();
     
