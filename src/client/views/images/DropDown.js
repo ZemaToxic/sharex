@@ -16,22 +16,15 @@ export class DropDown extends Component {
   }
   
   double(event) {
-    var x = document.getElementsByClassName(".image");
-    console.log(x)
+    $(".image").css("width", "45%")
   }
   triple(event) {
-    var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.width = "30%";
-    }  
+    $(".image").css("width", "30%")
+
   }
   quad(event) {
-    var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.width = "20%";
-    }  
+    $(".image").css("width", "20%")
+
   }
   showMenu(event) {
     event.preventDefault();
