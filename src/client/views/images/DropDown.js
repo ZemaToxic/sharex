@@ -26,14 +26,14 @@ export class DropDown extends Component {
     var x = document.querySelectorAll('.image');
     var i;
     for (i = 0; i < x.length; i++) {
-      x[i].style.width = "30%";
+      x[i].style.width = "33%";
     }  
   }
   quad(event) {
     var x = document.querySelectorAll('.image');
     var i;
     for (i = 0; i < x.length; i++) {
-      x[i].style.width = "20%";
+      x[i].style.width = "25%";
     }  
   }
   showMenu(event) {
