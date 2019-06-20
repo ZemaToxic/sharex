@@ -16,7 +16,7 @@ export class DropDown extends Component {
   }
   
   double(event) {
-    var x = document.querySelectorAll('file-loader image-files.image');
+    var x = document.querySelectorAll('.image');
     console.log(x);
     var i;
     for (i = 0; i < x.length; i++) {
