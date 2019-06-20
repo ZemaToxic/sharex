@@ -17,7 +17,7 @@ export class DropDown extends Component {
   
   double(event) {
     var x = document.querySelectorAll('container.images.file-loader image-files.image');
-    var i;
+    console.log(x);
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "45%";
       console.log(x[i])
