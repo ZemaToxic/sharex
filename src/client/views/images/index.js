@@ -5,7 +5,7 @@ import { fetchImages } from '../../redux/operations'
 
 import { SEO } from '../../components/seo'
 import { FileLoader } from '../../components/file-loader'
-import DropDown from './DropDown'
+import { DropDown } from './DropDown'
 
 import './index.scss'
 
