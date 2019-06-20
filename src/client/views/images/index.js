@@ -20,13 +20,8 @@ function Images ({ images }) {
         loader={fetchImages}
         display={(image, key) => (
           <div className="image" key={key}>
-            <a
-              href={image.name.split('.')[0]}
-              target="_blank"
-            >
-              <img
-                src={image.name}
-              />
+            <a href={image.name.split('.')[0]} target="_blank" >
+              <img src={image.name} />
             </a>
           </div>
         )}
