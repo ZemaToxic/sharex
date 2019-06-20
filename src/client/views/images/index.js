@@ -12,10 +12,8 @@ import './index.scss'
 function Images ({ images }) {
   return (
     <div className="images">
-      <SEO
-        title="Images"
-      />
-      <DropDown title='Image Layout'/>
+    <DropDown title='Image Layout'/>
+      <SEO title="Images" />
       <FileLoader
         className="image-files"
         files={images}
