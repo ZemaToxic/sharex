@@ -10,8 +10,23 @@ export class DropDown extends Component {
     
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
+    this.double = this.double.bing(this);
+    this.triple = this.triple.bing(this);
+    this.quad = this.quad.bing(this);
   }
   
+  double(event) {
+    var x = document.getElementsByClassName(".image")
+    x.style.width = "45%"
+  }
+  triple(event) {
+    var x = document.getElementsByClassName(".image")
+    x.style.width = "30%"
+  }
+  quad(event) {
+    var x = document.getElementsByClassName(".image")
+    x.style.width = "20%"
+  }
   showMenu(event) {
     event.preventDefault();
     
@@ -44,9 +59,9 @@ export class DropDown extends Component {
               <div className="menu" ref={(element) => {
                   this.dropdownMenu = element;
                 }}>
-                    <button> 2 Wide </button>
-                    <button> 3 Wide </button>
-                    <button> 4 Wide </button>
+                    <button onClick={this.double}> 2 Wide </button>
+                    <button onClick={this.triple}> 3 Wide </button>
+                    <button onClick={this.quad}> 4 Wide </button>
               </div>
             ) : ( null )
         }
