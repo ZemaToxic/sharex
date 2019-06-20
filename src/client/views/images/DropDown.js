@@ -10,9 +10,9 @@ export class DropDown extends Component {
     
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
-    this.double = this.double.bing(this);
-    this.triple = this.triple.bing(this);
-    this.quad = this.quad.bing(this);
+    this.double = this.double.bind(this);
+    this.triple = this.triple.bind(this);
+    this.quad = this.quad.bind(this);
   }
   
   double(event) {
