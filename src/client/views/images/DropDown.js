@@ -16,11 +16,8 @@ export class DropDown extends Component {
   }
   
   double(event) {
-    var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.width = "45%";
-    }
+    var x = document.getElementsByClassName(".image");
+    console.log(x)
   }
   triple(event) {
     var x = document.getElementsByClassName(".image-files").getElementsByClassName(".image");
