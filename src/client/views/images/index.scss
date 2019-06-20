@@ -20,7 +20,9 @@
 
 .DropDown {
   position: absolute;
-  right: 25px;
+  right: 40px;
+  background: rgb(32, 34, 37);
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
   cursor: pointer;
 }
 
@@ -29,7 +31,7 @@
   margin: 15px 15px;
   padding: 15px 15px;
   position: absolute;
-  top: 50px;
+  top: 100px;
   right: 0px;
   background: rgb(32, 34, 37);
   box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
