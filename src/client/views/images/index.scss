@@ -20,6 +20,18 @@
 
 .DropDown {
   position: absolute;
-  right: 15px;
+  right: 25px;
   cursor: pointer;
+}
+
+.menu {
+  display: block;
+  margin: 15px 15px;
+  padding: 15px 15px;
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  background: rgb(32, 34, 37);
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+  z-index: 9;
 }
