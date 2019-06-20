@@ -15,7 +15,7 @@ export function Header () {
           exact
           to="/"
         >
-          Simple ShareX Server
+          ZemaToxic ShareX Server
         </NavLink>
       </h1>
       <Nav />
