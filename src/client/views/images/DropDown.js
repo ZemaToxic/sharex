@@ -17,24 +17,20 @@ export class DropDown extends Component {
   
   double(event) {
     var x = document.querySelectorAll('.image');
-    console.log(x);
     var i;
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "45%";
-      console.log(x[i])
     }  
   }
   triple(event) {
-    var x = document.querySelectorAll('images.file-loader image-files.image');
-    console.log(x);
+    var x = document.querySelectorAll('.image');
     var i;
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "30%";
     }  
   }
   quad(event) {
-    var x = document.querySelectorAll('image-files.image');
-    console.log(x);
+    var x = document.querySelectorAll('.image');
     var i;
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "20%";
