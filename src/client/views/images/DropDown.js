@@ -34,7 +34,7 @@ export class DropDown extends Component {
   render() {
     return (
       <div>
-        <div className="LoginCard" onClick={this.showMenu}>
+        <div className="DropDown" onClick={this.showMenu}>
           <h3> {this.props.title} </h3>
         </div>
         
