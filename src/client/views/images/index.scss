@@ -17,3 +17,27 @@
     width: 100%;
   }
 }
+
+.DropDown {
+  display: block;
+  right: 40px;
+  cursor: pointer;
+}
+
+.menu {
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 15px;
+  background: rgb(32, 34, 37);
+  border-radius: 10px;
+  box-shadow: 5px 5px 13px 5px rgba(0, 0, 0, 0.60);
+  z-index: 9;
+}
+
+.menu > button {
+ border-radius: 3px;
+ font: inherit;
+ width: 150px;
+ margin: 5px; 
+}
