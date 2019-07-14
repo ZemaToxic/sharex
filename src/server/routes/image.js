@@ -23,7 +23,7 @@ export async function post (req, res) {
     await saveFile(req, 'image', path, { name: `${fileName}.${ext}` })
     const protocol = req.protocol;
     console.log(protocol);
-    if (protocol === 'undefined') {
+    if (!protocol) {
       protocol = 'http://'
     }
     new ServerResponse(`${protocol}${req.headers.host}/${fileName}`).send(res)
