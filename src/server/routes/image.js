@@ -24,7 +24,7 @@ export async function post (req, res) {
     const protocol = req.protocol;
     console.log(protocol);
     if (!protocol) {
-      protocol = 'http://'
+      protocol = "http://";
     }
     new ServerResponse(`${protocol}${req.headers.host}/${fileName}`).send(res)
   } catch (error) {
