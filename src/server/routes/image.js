@@ -21,7 +21,11 @@ export async function post (req, res) {
     }
     const fileName = req.hash
     await saveFile(req, 'image', path, { name: `${fileName}.${ext}` })
-    new ServerResponse(`${req.protocol}${req.headers.host}/${fileName}`).send(res)
+    const reqProtocol = 'http://'
+    if (req.secure) {
+      reqProtocol = 'https://'
+    }
+    new ServerResponse(`${reqProtocol}${req.headers.host}/${fileName}`).send(res)
   } catch (error) {
     new ServerResponse(error, 500).send(res)
   }
