@@ -21,6 +21,8 @@ export class DropDown extends Component {
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "45%";
       document.querySelector('.image').className = '.IIimage'; 
+      document.querySelector('.IIIimage').className = '.IIimage'; 
+      document.querySelector('.IVimage').className = '.IIimage'; 
     }  
   }
   triple(event) {
@@ -29,6 +31,8 @@ export class DropDown extends Component {
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "30%";
       document.querySelector('.image').className = '.IIIimage'; 
+      document.querySelector('.IIimage').className = '.IIIimage'; 
+      document.querySelector('.IVimage').className = '.IIIimage'; 
     }  
   }
   quad(event) {
@@ -37,6 +41,8 @@ export class DropDown extends Component {
     for (i = 0; i < x.length; i++) {
       x[i].style.width = "20%";
       document.querySelector('.image').className = '.IVimage'; 
+      document.querySelector('.IIimage').className = '.IVimage'; 
+      document.querySelector('.IIIimage').className = '.IVimage'; 
     }  
   }
   showMenu(event) {
