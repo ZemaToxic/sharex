@@ -5,6 +5,8 @@ import loadable from '@loadable/component'
 
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
+import { PrivateRoute } from "../components/_Components/PrivateRoute";
+
 const Home = loadable(() => import('../views/home'))
 const Links = loadable(() => import('../views/links'))
 const Pastes = loadable(() => import('../views/pastes'))
@@ -23,9 +25,9 @@ export function App () {
       <main className="container">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/images" component={Images} />
-          <Route path="/links" component={Links} />
-          <Route path="/pastes" component={Pastes} />
+          <PrivateRoute exact path="/images" component={Images} />
+          <PrivateRoute path="/links" component={Links} />
+          <PrivateRoute path="/pastes" component={Pastes} />
           <Route component={NotFound} />
         </Switch>
       </main>
