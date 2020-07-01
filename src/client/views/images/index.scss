@@ -6,31 +6,36 @@
 
 .image-files > .image {
   width: 45%;
+  height: auto;
 }
-
 .image-files > .IIimage {
   width: 45%;
+  height: auto;
 }
-
 .image-files > .IIIimage {
   width: 30%;
+  height: auto;
 }
-
 .image-files > .IVimage {
   width: 20%;
+  height: auto;
 }
 
 .image-files > .image > a > img {
-  width: 100%;
+  max-width: 100%;
+  max-height: auto;
 }
 .image-files > .IIimage > a > img {
-  width: 100%;
+  max-width: 100%;
+  max-height: auto;
 }
 .image-files > .IIIimage > a > img {
-  width: 100%;
+  max-width: 100%;
+  max-height: auto;
 }
 .image-files > .IVimage > a > img {
-  width: 100%;
+  max-width: 100%;
+  max-height: auto;
 }
 
 @media (max-width: 800px) {
