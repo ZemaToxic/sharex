@@ -12,7 +12,7 @@ const Links = loadable(() => import('../views/links'))
 const Pastes = loadable(() => import('../views/pastes'))
 const Images = loadable(() => import('../views/images'))
 const NotFound = loadable(() => import('../views/not-found'))
-import {login} from '../views/login'
+import { Login } from '../views/images'
 
 import manifest from '../../manifest.json'
 
@@ -29,7 +29,7 @@ export function App () {
           <PrivateRoute exact path="/images" component={Images} />
           <PrivateRoute exact path="/links" component={Links} />
           <PrivateRoute exact path="/pastes" component={Pastes} />
-          <Route path="/login" component={login} />
+          <Route path="/login" component={Login} />
           <Route component={NotFound} />
         </Switch>
       </main>
