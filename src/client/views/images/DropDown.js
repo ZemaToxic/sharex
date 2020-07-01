@@ -17,33 +17,45 @@ export class DropDown extends Component {
   
   double(event) {
     var x = document.querySelectorAll('.image');
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.width = "45%";
-      document.querySelector('.image').className = '.IIimage'; 
-      document.querySelector('.IIIimage').className = '.IIimage'; 
-      document.querySelector('.IVimage').className = '.IIimage'; 
-    }  
+    x.forEach(function() {
+      x.className = '.IIimage'; 
+    })
+    var y = document.querySelectorAll('.IIIimage');
+    y.forEach(function() {
+      y.className = '.IIimage'; 
+    })
+    var z = document.querySelectorAll('.IVimage');
+    z.forEach(function() {
+      z.className = '.IIimage'; 
+    })
   }
   triple(event) {
     var x = document.querySelectorAll('.image');
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.width = "30%";
-      document.querySelector('.image').className = '.IIIimage'; 
-      document.querySelector('.IIimage').className = '.IIIimage'; 
-      document.querySelector('.IVimage').className = '.IIIimage'; 
-    }  
+    x.forEach(function() {
+      x.className = '.IIIimage'; 
+    })
+    var y = document.querySelectorAll('.IIimage');
+    y.forEach(function() {
+      y.className = '.IIIimage'; 
+    })
+    var z = document.querySelectorAll('.IVimage');
+    z.forEach(function() {
+      z.className = '.IIIimage'; 
+    })
   }
   quad(event) {
     var x = document.querySelectorAll('.image');
-    var i;
-    for (i = 0; i < x.length; i++) {
-      x[i].style.width = "20%";
-      document.querySelector('.image').className = '.IVimage'; 
-      document.querySelector('.IIimage').className = '.IVimage'; 
-      document.querySelector('.IIIimage').className = '.IVimage'; 
-    }  
+    x.forEach(function() {
+      x.className = '.IVimage'; 
+    })
+    var y = document.querySelectorAll('.IIimage');
+    y.forEach(function() {
+      y.className = '.IVimage'; 
+    })
+    var z = document.querySelectorAll('.IIIimage');
+    z.forEach(function() {
+      z.className = '.IVimage'; 
+    })
   }
   showMenu(event) {
     event.preventDefault();
