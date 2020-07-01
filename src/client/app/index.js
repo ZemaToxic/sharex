@@ -5,13 +5,14 @@ import loadable from '@loadable/component'
 
 import { Header } from '../components/header'
 import { Footer } from '../components/footer'
-import { PrivateRoute } from "../components/_Components/PrivateRoute";
+import { PrivateRoute } from "../components/_Components/PrivateRoute.jsx";
 
 const Home = loadable(() => import('../views/home'))
 const Links = loadable(() => import('../views/links'))
 const Pastes = loadable(() => import('../views/pastes'))
 const Images = loadable(() => import('../views/images'))
 const NotFound = loadable(() => import('../views/not-found'))
+import {login} from '../views/login'
 
 import manifest from '../../manifest.json'
 
@@ -26,8 +27,9 @@ export function App () {
         <Switch>
           <Route path="/" exact component={Home} />
           <PrivateRoute exact path="/images" component={Images} />
-          <PrivateRoute path="/links" component={Links} />
-          <PrivateRoute path="/pastes" component={Pastes} />
+          <PrivateRoute exact path="/links" component={Links} />
+          <PrivateRoute exact path="/pastes" component={Pastes} />
+          <Route path="/login" component={login} />
           <Route component={NotFound} />
         </Switch>
       </main>
