@@ -3,76 +3,51 @@ import React, { Component } from 'react';
 export class DropDown extends Component {
   constructor() {
     super();
-    
-    this.state = {
-      showMenu: false,
-    };
+    this.state = { showMenu: false, };
     
     this.showMenu = this.showMenu.bind(this);
     this.closeMenu = this.closeMenu.bind(this);
     this.double = this.double.bind(this);
     this.triple = this.triple.bind(this);
     this.quad = this.quad.bind(this);
+    this.dropdownMenu = null;
   }
   
-  double(event) {
-    var x = document.querySelectorAll('.image');
-    x.forEach(function() {
-      x.className = '.IIimage'; 
-    })
-    var y = document.querySelectorAll('.IIIimage');
-    y.forEach(function() {
-      y.className = '.IIimage'; 
-    })
-    var z = document.querySelectorAll('.IVimage');
-    z.forEach(function() {
-      z.className = '.IIimage'; 
-    })
+  double() {
+    const classes = document.querySelectorAll(".image, .IIimage, .IIIimage, .IVimage")
+    console.log(classes)
+    for (let i = 0; i < classes.length; i++) {
+      classes[i].classList.replace('image', 'IIimage')
+      classes[i].classList.replace('IIIimage', 'IIimage')
+      classes[i].classList.replace('IVimage', 'IIimage')
+    }
   }
-  triple(event) {
-    var x = document.querySelectorAll('.image');
-    x.forEach(function() {
-      x.className = '.IIIimage'; 
-    })
-    var y = document.querySelectorAll('.IIimage');
-    y.forEach(function() {
-      y.className = '.IIIimage'; 
-    })
-    var z = document.querySelectorAll('.IVimage');
-    z.forEach(function() {
-      z.className = '.IIIimage'; 
-    })
+  triple() {
+    const classes = document.querySelectorAll(".image, .IIimage, .IIIimage, .IVimage")
+    console.log(classes)
+    for (let i = 0; i < classes.length; i++) {
+      classes[i].classList.replace('image', 'IIIimage')
+      classes[i].classList.replace('IIimage', 'IIIimage')
+      classes[i].classList.replace('IVimage', 'IIIimage')
+    }
   }
-  quad(event) {
-    var x = document.querySelectorAll('.image');
-    x.forEach(function() {
-      x.className = '.IVimage'; 
-    })
-    var y = document.querySelectorAll('.IIimage');
-    y.forEach(function() {
-      y.className = '.IVimage'; 
-    })
-    var z = document.querySelectorAll('.IIIimage');
-    z.forEach(function() {
-      z.className = '.IVimage'; 
-    })
+  quad() {
+    const classes = document.querySelectorAll(".image, .IIimage, .IIIimage, .IVimage")
+    console.log(classes)
+    for (let i = 0; i < classes.length; i++) {
+      classes[i].classList.replace('image', 'IVimage')
+      classes[i].classList.replace('IIIimage', 'IVimage')
+      classes[i].classList.replace('IIimage', 'IVimage')
+    }
   }
   showMenu(event) {
     event.preventDefault();
-    
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeMenu);
-    });
+    this.setState({ showMenu: true }, () => { document.addEventListener('click', this.closeMenu); });
   }
   
-  closeMenu(event) {
-    
+  closeMenu(event) { 
     if (!this.dropdownMenu.contains(event.target)) {
-      
-      this.setState({ showMenu: false }, () => {
-        document.removeEventListener('click', this.closeMenu);
-      });  
-      
+      this.setState({ showMenu: false }, () => { document.removeEventListener('click', this.closeMenu); });  
     }
   }
 
@@ -84,15 +59,12 @@ export class DropDown extends Component {
         </div>
         
         {
-          this.state.showMenu
-            ? (
-              <div className="menu" ref={(element) => {
-                  this.dropdownMenu = element;
-                }}>
+          this.state.showMenu ? (
+              <div className="menu" ref={(element) => { this.dropdownMenu = element; }}>
                     <button onClick={this.double}> 2 Wide </button>
                     <button onClick={this.triple}> 3 Wide </button>
                     <button onClick={this.quad}> 4 Wide </button>
-              </div>
+              </div> 
             ) : ( null )
         }
       </div>
