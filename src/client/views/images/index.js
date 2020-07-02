@@ -21,6 +21,7 @@ class Images extends React.Component {
   }
 
   setColumns (columns) {
+    console.log(columns)
     this.setState({
       columns
     })

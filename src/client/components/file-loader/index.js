@@ -26,6 +26,7 @@ export const FileLoader = connect(null, mapDispatchToProps)(({
   tail,
   files,
   moreStyle = {},
+  columns = 4,
   display = (file, key) => (<div className="file" key={key}>{file.name}</div>)
 }) => {
   const {
