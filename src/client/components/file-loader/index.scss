@@ -1,7 +1,12 @@
 @import 'color';
 
 .file-loader {
+  display: grid;
   margin: 1em 0;
+  grid-template-columns: repeat(4, 1fr);
+}
+.file-loader[columns] {
+  grid-template-columns: repeat(attr(columns), 1fr);
 }
 
 .more-btn,
