@@ -15,7 +15,6 @@ export class DropDown extends Component {
   
   double() {
     const classes = document.querySelectorAll(".image, .IIimage, .IIIimage, .IVimage")
-    console.log(classes)
     for (let i = 0; i < classes.length; i++) {
       classes[i].classList.replace('image', 'IIimage')
       classes[i].classList.replace('IIIimage', 'IIimage')
@@ -24,7 +23,6 @@ export class DropDown extends Component {
   }
   triple() {
     const classes = document.querySelectorAll(".image, .IIimage, .IIIimage, .IVimage")
-    console.log(classes)
     for (let i = 0; i < classes.length; i++) {
       classes[i].classList.replace('image', 'IIIimage')
       classes[i].classList.replace('IIimage', 'IIIimage')
@@ -33,7 +31,6 @@ export class DropDown extends Component {
   }
   quad() {
     const classes = document.querySelectorAll(".image, .IIimage, .IIIimage, .IVimage")
-    console.log(classes)
     for (let i = 0; i < classes.length; i++) {
       classes[i].classList.replace('image', 'IVimage')
       classes[i].classList.replace('IIIimage', 'IVimage')
