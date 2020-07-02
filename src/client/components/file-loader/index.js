@@ -26,58 +26,24 @@ export const FileLoader = connect(null, mapDispatchToProps)(({
   tail,
   files,
   moreStyle = {},
-  columns = 4,
   display = (file, key) => (<div className="file" key={key}>{file.name}</div>)
 }) => {
-  const {
-    isFetching,
-    error,
-    end,
-    data
-  } = files
+  const { isFetching, error, end, data } = files
 
   return (
     <>
-      <div
-        className="refresh-btn"
-      >
-        <button
-          onClick={head}
-          disabled={isFetching}
-        >
-          {
-            isFetching
-              ? 'Loading...'
-              : 'Refresh'
-          }
+      <div className="refresh-btn" >
+        <button onClick={head} disabled={isFetching} >
+          { isFetching ? 'Loading...' : 'Refresh' }
         </button>
       </div>
-      <div style={`grid-template-columns: repeat(${columns}, 1fr);`} className={classname('file-loader', className)}>
-
-        {
-          data.map(display)
-        }
-        {
-          error
-            ? (<div>Error: {error.message}</div>)
-            : null
-        }
+      <div className={classname('file-loader', className)}>
+        { data.map(display) }
+        { error ? (<div>Error: {error.message}</div>) : null }
       </div>
-      <div
-        className="more-btn"
-      >
-        <button
-          onClick={tail}
-          disabled={end || isFetching}
-          style={moreStyle}
-        >
-          {
-            isFetching
-              ? 'Loading...'
-              : end
-                ? 'Nothing Found'
-                : 'More'
-          }
+      <div className="more-btn" >
+        <button onClick={tail} disabled={end || isFetching} style={moreStyle} >
+          { isFetching ? 'Loading...' : end ? 'Nothing Found' : 'More' }
         </button>
       </div>
     </>
