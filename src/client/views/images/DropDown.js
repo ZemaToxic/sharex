@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 export class DropDown extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = { showMenu: false, };
     
     this.showMenu = this.showMenu.bind(this);
@@ -61,9 +61,9 @@ export class DropDown extends Component {
         {
           this.state.showMenu ? (
               <div className="menu" ref={(element) => { this.dropdownMenu = element; }}>
-                    <button onClick={() => this.props.onChange(2)}> 2 Wide </button>
-                    <button onClick={() => this.props.onChange(3)}> 3 Wide </button>
-                    <button onClick={() => this.props.onChange(4)}> 4 Wide </button>
+                    <button onClick={this.double}> 2 Wide </button>
+                    <button onClick={this.triple}> 3 Wide </button>
+                    <button onClick={this.quad}> 4 Wide </button>
               </div> 
             ) : ( null )
         }
