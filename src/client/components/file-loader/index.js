@@ -26,7 +26,6 @@ export const FileLoader = connect(null, mapDispatchToProps)(({
   tail,
   files,
   moreStyle = {},
-  columns = 4,
   display = (file, key) => (<div className="file" key={key}>{file.name}</div>)
 }) => {
   const {
@@ -53,6 +52,7 @@ export const FileLoader = connect(null, mapDispatchToProps)(({
         </button>
       </div>
       <div style={`grid-template-columns: repeat(${columns}, 1fr);`} className={classname('file-loader', className)}>
+
         {
           data.map(display)
         }
