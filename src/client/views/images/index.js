@@ -33,7 +33,7 @@ class Images extends React.Component {
         <SEO title="Images" />
         <FileLoader
           className="image-files"
-          files={images}
+          files={this.props.images}
           loader={fetchImages}
           columns={this.state.columns}
           display={(image, key) => (

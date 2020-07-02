@@ -52,7 +52,7 @@ export const FileLoader = connect(null, mapDispatchToProps)(({
           }
         </button>
       </div>
-      <grid columns={columns} className={classname('file-loader', className)}>
+      <div style={`grid-template-columns: repeat(${columns}, 1fr);`} className={classname('file-loader', className)}>
         {
           data.map(display)
         }
@@ -61,7 +61,7 @@ export const FileLoader = connect(null, mapDispatchToProps)(({
             ? (<div>Error: {error.message}</div>)
             : null
         }
-      </grid>
+      </div>
       <div
         className="more-btn"
       >
